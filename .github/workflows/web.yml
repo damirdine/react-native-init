@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Clear Metro Cache
-        run: npx expo start --clear
+      # - name: Clear Metro Cache
+      #   run: npx expo start --clear
 
       - name: Check Expo Version
         run: npx expo doctor
