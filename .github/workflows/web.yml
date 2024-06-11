@@ -25,7 +25,7 @@ jobs:
       #   run: npx expo start --clear
 
       - name: Check Expo Version
-        run: npx expo doctor
+        run: npx expo-doctor
 
       - name: Build project
         run: npm run build:web
