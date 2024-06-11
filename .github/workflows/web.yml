@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Upgrade all dependencies to match the installed SDK version.
+        run: npx expo install --fix
+
       - name: Expo check to review and upgrade your dependencies
         run: npx expo install --check
 
