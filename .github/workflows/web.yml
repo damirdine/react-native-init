@@ -30,8 +30,8 @@ jobs:
       - name: Check Expo Version
         run: npx expo-doctor
 
-      - name: Build project
-        run: npm run build:web
+      - name: Build project (need to be run twice because need of caching )
+        run: npm run build:web || true ; npm run build:web
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
