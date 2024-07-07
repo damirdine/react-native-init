@@ -1,16 +1,21 @@
 import { useState } from "react";
-import { Pressable, Text, View , TextInput} from "react-native";
+import { Pressable, Text, View, TextInput } from "react-native";
 
 export default function Index() {
-  const [text, onChangeText] = useState('Useless Text');
+  const [text, onChangeText] = useState("World");
+  const onPress = () => alert("hello " + text);
   return (
     <View className="bg-red-50 flex-1 justify-center items-center">
-      <Text className="text-red-700">
-        Edit app/index.tsx to edit this screen.
-      </Text>
-      <TextInput className="p-2" placeholder="tape your name here" onChangeText={(text)=> onChangeText(text)} onSubmitEditing={()=> alert("TEST SUBMiT")}></TextInput>
-      <Pressable className="p-5 bg-red-400"
-      onPress={()=> alert("hello " + text)}>Hello</Pressable>
+      <Text className="text-red-700 mb-2">Tape your name here.</Text>
+      <TextInput
+        className="p-2 bg-white mb-4 placeholder-gray-400"
+        placeholder="tape your name here"
+        onChangeText={(text) => onChangeText(text)}
+        onSubmitEditing={onPress}
+      ></TextInput>
+      <Pressable className="p-5 bg-red-400 text-white" onPress={onPress}>
+        Hello
+      </Pressable>
     </View>
   );
 }
