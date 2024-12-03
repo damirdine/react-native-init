@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Pressable, Text, View, TextInput } from "react-native";
 
@@ -14,7 +15,7 @@ export default function Index() {
         onSubmitEditing={onPress}
       ></TextInput>
       <Pressable className="p-5 bg-red-400 text-white" onPress={onPress}>
-        Hello
+        <Text>Hello</Text>
       </Pressable>
     </View>
   );
